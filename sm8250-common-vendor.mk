@@ -602,38 +602,3 @@ PRODUCT_PACKAGES += \
     vendor_lib64_libEGL_adreno_so \
     vendor_lib64_libGLESv2_adreno_so \
     vendor_lib64_libq3dtools_adreno_so
-
-ifneq ($(TARGET_IS_TABLET),true)
-
-PRODUCT_COPY_FILES += \
-    vendor/xiaomi/sm8250-common/proprietary/vendor/etc/apdr.conf:$(TARGET_COPY_OUT_VENDOR)/etc/apdr.conf \
-    vendor/xiaomi/sm8250-common/proprietary/vendor/etc/flp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/flp.conf \
-    vendor/xiaomi/sm8250-common/proprietary/vendor/etc/gps.conf:$(TARGET_COPY_OUT_VENDOR)/etc/gps.conf \
-    vendor/xiaomi/sm8250-common/proprietary/vendor/etc/init/android.hardware.gnss@2.1-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gnss@2.1-service-qti.rc \
-    vendor/xiaomi/sm8250-common/proprietary/vendor/etc/init/vendor.xiaomi.hardware.mlipay@1.1-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.xiaomi.hardware.mlipay@1.1-service.rc \
-    vendor/xiaomi/sm8250-common/proprietary/vendor/etc/sap.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sap.conf
-
-PRODUCT_PACKAGES += \
-    android.hardware.gnss@2.1-impl-qti \
-    vendor.qti.gnss@4.0-impl \
-    libbatching \
-    libgeofencing \
-    libgnss \
-    libgnsspps \
-    libloc_api_wds \
-    libloc_socket \
-    liblocationservice \
-    liblocationservice_glue \
-    libmlipay \
-    libmlipay@1.1 \
-    libslimclient \
-    vendor.qti.gnss@4.0-service \
-    SoterService \
-    android.hardware.gnss@2.1-service-qti.xml \
-    manifest_vendor.xiaomi.hardware.mlipay.xml \
-    vendor.qti.gnss@4.0-service.xml \
-    android.hardware.gnss@2.1-service-qti \
-    mlipayd@1.1 \
-    slim_daemon
-
-endif
